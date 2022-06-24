@@ -1,0 +1,11 @@
+@inherits ValidationInputBase
+
+<div class="validation-container">
+    <input class="validation-input form-control" 
+           value="@Value"
+           @onchange="(async (e) => await ValueChanged.InvokeAsync(e.Value.ToString()))">
+    <div class="val-tooltip">
+        !
+        <span class="val-tooltiptext"></span>
+    </div>
+</div>
